@@ -140,7 +140,10 @@
     text-decoration:none;
 }
 
-
+.map-point.active .tooltip{
+    opacity:1;
+    visibility:visible;
+}
 
 
 
