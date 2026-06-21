@@ -26,8 +26,8 @@
 }
 
 .dot{
-    width:12px;
-    height:12px;
+    width:15px;
+    height:15px;
 
     background:#0F2D63;
 
@@ -55,8 +55,8 @@
 
 .dot.multi{
 
-    width:14px;
-    height:14px;
+    width:15px;
+    height:15px;
 
     display:flex;
     justify-content:center;
