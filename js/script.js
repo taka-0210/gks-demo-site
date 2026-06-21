@@ -88,7 +88,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  document.querySelectorAll('.map-point').forEach(point => {
 
+  point.addEventListener('click', function(e){
 
+    e.stopPropagation();
 
+    document.querySelectorAll('.map-point').forEach(item => {
+
+      if(item !== this){
+        item.classList.remove('active');
+      }
+
+    });
+
+    this.classList.toggle('active');
+
+  });
+
+});
+
+document.addEventListener('click', () => {
+
+  document.querySelectorAll('.map-point').forEach(point => {
+    point.classList.remove('active');
+  });
+
+});
 });
