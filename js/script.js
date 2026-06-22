@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     entries.forEach(entry => {
 
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
 
         entry.target.classList.add("show");
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   }, {
-    threshold:0.2
+    threshold: 0.2
   });
 
   fadeItems.forEach(item => {
@@ -90,29 +90,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll('.map-point').forEach(point => {
 
-  point.addEventListener('click', function(e){
+    point.addEventListener('click', function (e) {
 
-    e.stopPropagation();
+      e.stopPropagation();
 
-    document.querySelectorAll('.map-point').forEach(item => {
+      document.querySelectorAll('.map-point').forEach(item => {
 
-      if(item !== this){
-        item.classList.remove('active');
-      }
+        if (item !== this) {
+          item.classList.remove('active');
+        }
+
+      });
+
+      this.classList.toggle('active');
 
     });
 
-    this.classList.toggle('active');
-
   });
 
-});
+  document.addEventListener('click', () => {
 
-document.addEventListener('click', () => {
+    document.querySelectorAll('.map-point').forEach(point => {
+      point.classList.remove('active');
+    });
 
-  document.querySelectorAll('.map-point').forEach(point => {
-    point.classList.remove('active');
   });
-
-});
 });
